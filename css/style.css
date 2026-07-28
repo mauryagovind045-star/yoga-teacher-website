@@ -536,6 +536,63 @@ a { color: inherit; }
   color: var(--sand);
 }
 
+/* ═══════════ TESTIMONIALS ═══════════ */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+.quote-card {
+  position: relative;
+  background: #FDFBF7;
+  border-radius: 8px;
+  padding: 2.6rem 2.2rem 2.2rem;
+  box-shadow: 0 22px 45px -30px rgba(44, 36, 25, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+.quote-card--accent { background: var(--moss); color: var(--cream); }
+.quote-card__mark {
+  font-family: var(--font-display);
+  font-size: 4.4rem;
+  line-height: 0.6;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+.quote-card--accent .quote-card__mark { color: var(--sand); }
+.quote-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  flex: 1;
+}
+.quote-card figcaption {
+  margin-top: 1.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--sand);
+}
+.quote-card--accent figcaption { border-top-color: color-mix(in srgb, var(--sand) 40%, transparent); }
+.quote-card__name {
+  display: block;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.quote-card__role {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  margin-top: 0.25rem;
+}
+.quote-card--accent .quote-card__role { color: var(--sand); }
+
+@media (max-width: 980px) {
+  .testimonials__grid { grid-template-columns: 1fr; }
+}
+
 /* ═══════════ GALLERY ═══════════ */
 .gallery__grid {
   display: grid;
@@ -782,6 +839,12 @@ a { color: inherit; }
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .insta__grid a:hover img { transform: scale(1.06); filter: brightness(1.05); }
+.insta__cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 .insta__cta .btn {
   display: inline-flex;
   align-items: center;
