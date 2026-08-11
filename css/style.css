@@ -643,6 +643,24 @@ a { color: inherit; }
 }
 
 /* ═══════════ TESTIMONIALS ═══════════ */
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid var(--sand);
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  transition: border-color 0.3s ease;
+}
+.google-badge:hover { border-color: var(--gold); }
+.google-badge__stars { color: var(--gold); letter-spacing: 0.18em; }
+.google-badge__text strong { font-weight: 500; }
+
 .testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
